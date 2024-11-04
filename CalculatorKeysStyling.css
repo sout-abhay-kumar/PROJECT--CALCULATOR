@@ -1,0 +1,173 @@
+* {
+    
+}
+
+.calculator {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f6;
+}
+
+.model-name p {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.display {
+    width: 94%;
+    height: 50px;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.button {
+    width: 22%;
+    height: 50px;
+    margin: 1%;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.equals {
+    width: 68px;
+    background-color: #2196F3;
+}
+
+.morebutton {
+    width: 22%;
+    height: 50px;
+    background-color: #2196F3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 1%;
+}
+
+.shapemorebutton  {
+    width: 47%;
+    height: 50px;
+    background-color: #2196F3;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 1%;
+}
+
+.morebutton:hover {
+    background-color: #ddd;
+    color: #9C27B0;
+}
+
+.more-buttons, .shape-buttons, .circle-buttons, .square-buttons, .rectangle-buttons, .triangle-buttons, .equitri-buttons, .isotri-buttons  {
+    display: none;
+    margin-top: 10px;
+}
+
+.more-buttons .button, .shape-buttons .button {
+    background-color: #9C27B0;
+}
+
+.more-buttons .button:hover, .shape-buttons .button:hover {
+    background-color: #77707a;
+}
+
+.buttons {
+    width: 47%;
+    height: 50px;
+    margin: 1%;
+    font-size: smaller;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #147517;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.buttonenter {
+    border: none;
+    margin: 1%;
+    height: 50px;
+    width: 68px;
+    background-color: #2196F3;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.buttonenter:hover {
+    background-color: #ddd;
+    color: #9C27B0;
+}
+
+.isotri-buttons .equitri-buttons:hover {
+    color: #1c4363;
+    background-color: #213af3;
+}
+
+/* Cloud Tooltip Container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Cloud-like Tooltip Text */
+.tooltip-text {
+    visibility: hidden;
+    width: 150px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 35px; /* Adjusts the cloud position */
+    left: 50%;
+    bottom: 105%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-size: 14px;
+    white-space: wrap;
+}
+
+/* Arrow for the Cloud */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Position below the cloud */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator</title>
+    <link rel="stylesheet" href="CalculatorKeysStyling.css">
+</head>
+<body>
+
+<div class="model-name">
+    <p>CALCULATOR</p>
+</div>    
+
+<div class="calculator">
+    <input type="text" class="display" id="display" disabled />
+
+    <!-- Basic Number and Operator Buttons -->
+    <button class="button" onclick="appendValue('1')">1</button>
+    <button class="button" onclick="appendValue('2')">2</button>
+    <button class="button" onclick="appendValue('3')">3</button>
+    <button class="button" onclick="appendValue('+')">+</button>
+
+    <button class="button" onclick="appendValue('4')">4</button>
+    <button class="button" onclick="appendValue('5')">5</button>
+    <button class="button" onclick="appendValue('6')">6</button>
+    <button class="button" onclick="appendValue('-')">-</button>
+
+    <button class="button" onclick="appendValue('7')">7</button>
+    <button class="button" onclick="appendValue('8')">8</button>
+    <button class="button" onclick="appendValue('9')">9</button>
+    <button class="button" onclick="appendValue('*')">*</button>
+
+    <button class="button" onclick="appendValue('/')">/</button>   
+    <button class="button" onclick="appendValue('0')">0</button>
+    <button class="button" onclick="appendDecimal()">.</button>
+    <div class="tooltip">
+        <button class="button equals" id="hoverButton"onclick="calculateResult()">=</button>
+        <div class="tooltip-text">"Equals button applies only to arithmetic calculations!"</div>
+    </div>
+  
+    <button class="button" onclick="clearDisplay()">C</button>
+    <button class="button" onclick="appendPi()">π</button>
+    <button class="morebutton" id="hoverButton"onclick="toggleSection('more-buttons')">More</button>
+    <div class="tooltip">
+        <button class="buttonenter" id="hoverButton"onclick="handleEnterPress()">Enter</button>
+        <div class="tooltip-text">"Enter button applies only to shape calculations!"</div>
+    </div>
+
+    <!-- More Buttons Section -->
+    <div class="more-buttons" id="more-buttons">
+        <button class="button" onclick="appendValue('%')">%</button>
+        <button class="button" onclick="appendSqrt()">√</button>
+        <button class="button" onclick="appendValue('^')">^</button>
+        <button class="button" onclick="appendValue('<')"><</button>
+        <button class="button" onclick="appendValue('>')">></button>
+        <button class="button" onclick="appendValue('==')">==</button>
+        <button class="button" onclick="appendValue('>=')">>=</button>
+        <button class="button" onclick="appendValue('<=')"><=</button>
+        <button class="button" onclick="appendE()">e</button>
+        <button class="button" onclick="appendC()">c</button>
+        <button class="shapemorebutton" onclick="toggleSection('shape-buttons')">Shape</button>
+
+        <!-- Shape Buttons Section -->
+        <div class="shape-buttons" id="shape-buttons">
+            <button class="shapemorebutton" onclick="showOnlySection('circle-buttons')">Circle</button>
+            <button class="shapemorebutton" onclick="showOnlySection('square-buttons')">Square</button>
+            <button class="shapemorebutton" onclick="showOnlySection('rectangle-buttons')">Rectangle</button>
+            <button class="shapemorebutton" onclick="showOnlySection('triangle-buttons')">Triangle</button>
+        </div>
+
+        <!-- Circle Buttons Section -->
+        <div class="circle-buttons" id="circle-buttons">
+            <button class="buttons" onclick="setOperationTypeCircle('area')">Area</button>
+            <button class="buttons" onclick="setOperationTypeCircle('circumference')">Circumference</button>
+        </div>
+
+        <!-- Square Buttons Section -->
+        <div class="square-buttons" id="square-buttons">
+            <button class="buttons" onclick="setOperationTypeSquare('area')">Area</button>
+            <button class="buttons" onclick="setOperationTypeSquare('perimeter')">Perimeter</button>
+            <button class="buttons" onclick="setOperationTypeSquare('diagonal')">Diagonal</button>
+        </div>
+
+        <!-- Rectangle Buttons Section -->
+        <div class="rectangle-buttons" id="rectangle-buttons">
+            <button class="buttons" onclick="setOperationTypeRectangle('area')">Area</button>
+            <button class="buttons" onclick="setOperationTypeRectangle('perimeter')">Perimeter</button>
+            <button class="buttons" onclick="setOperationTypeRectangle('diagonal')">Diagonal</button>
+        </div>
+
+        <div class="triangle-buttons" id="triangle-buttons">
+            <button class="shapemorebutton" onclick="showOnlySection('equitri-buttons')">Equilateral Triangle</button>
+            <button class="shapemorebutton" onclick="showOnlySection('isotri-buttons')">Isosceles Triangle</button>
+        </div>
+
+        <div class="equitri-buttons" id="equitri-buttons">
+            <button class="buttons" onclick="setOperationTypeEquiTri('area')">Area</button>
+            <button class="buttons" onclick="setOperationTypeEquiTri('height')">Height</button>
+            <button class="buttons" onclick="setOperationTypeEquiTri('perimeter')">Perimeter</button>
+        </div>
+
+        <div class="isotri-buttons" id="isotri-buttons">
+            <button class="buttons" onclick="setOperationTypeIsoTri('area')">Area</button>
+            <button class="buttons" onclick="setOperationTypeIsoTri('height')">Height</button>
+            <button class="buttons" onclick="setOperationTypeIsoTri('perimeter')">Perimeter</button>
+        </div>
+        
+    </div>
+</div>
+
+<script src="CalculatorKeysLogic.js"></script>
+
+</body>
+</html>
