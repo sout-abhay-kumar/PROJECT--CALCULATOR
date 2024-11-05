@@ -27,12 +27,9 @@ Enter first number: 10
 Enter second number: 5
 Choose operation (+, -, *, /): +
 Result: 15
-<\p>
+</p>
   
 <h2>Contributing</h2>
 
-<p>Contributions are welcome! Please follow the contribution guidelines if you want to make improvements.</p>
+<p>Contributions are welcome! only if you want to make further improvements.</p>
 
-<h2>License</h2>
-
-<p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
