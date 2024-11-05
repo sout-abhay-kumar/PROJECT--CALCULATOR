@@ -13,22 +13,21 @@ Even it also supports geometry calculations
 
 <h2>Installation</h2>
 
-<pre>
-Clone this repository:
-git clone https://github.com/sout-abhay-kumar/PROJECT--CALCULATOR.git
+<p>Clone this repository:</p>
+<p>git clone https://github.com/sout-abhay-kumar/PROJECT--CALCULATOR.git</p>
   
-Navigate to the project directory:
-cd PROJECT--CALCULATOR
-</pre>
+<p>Navigate to the project directory:</p>
+<p>cd PROJECT--CALCULATOR</p>
+
 
 <h2>Example</h2>
 
-<pre>
+<p>
 Enter first number: 10
 Enter second number: 5
 Choose operation (+, -, *, /): +
 Result: 15
-<\pre>
+<\p>
   
 <h2>Contributing</h2>
 
